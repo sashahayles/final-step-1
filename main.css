@@ -33,5 +33,9 @@ display: none;
 }
 
 .jumbotron {
-  background-image: url('imgs/pexels-ron-lach-8142196.jpg')
+background-image: url('imgs/crystalweed-cannabis-QrK0mgbk2r0-unsplash.jpg');
+padding: 12rem 2rem;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 }
