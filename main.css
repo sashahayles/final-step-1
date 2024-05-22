@@ -1,0 +1,37 @@
+/*general css*/
+
+.container-fluid {
+padding: 0 !important;
+ }
+
+.body-heading {
+text-align: center;
+font-size: 38px;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 2px;
+}
+@media (min-width: 992px) {
+.body-heading {
+font-size: 42px;
+ }
+ }
+
+/*navbar*/
+#hamburger {
+display: block;
+background-color: transparent;
+margin: auto 0 auto;
+font-size: 30px;
+text-decoration: none;
+border: 1px solid transparent;
+ }
+@media (min-width: 992px) {
+#hamburger {
+display: none;
+}
+}
+
+.jumbotron {
+  background-image: url('imgs/pexels-ron-lach-8142196.jpg')
+}
