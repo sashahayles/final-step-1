@@ -39,20 +39,22 @@
     <!--api code-->
     <script src="third-party.js"></script>
 <script>
-const settings = {
-	async: true,
-	crossDomain: true,
-	url: 'https://sephora.p.rapidapi.com/us/products/v2/detail?productId=2535581&preferedSku=2535581',
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': rapidAPIToken,
-		'X-RapidAPI-Host': 'sephora.p.rapidapi.com'
-	}
-};
+const data = null;
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = false;
+
+xhr.addEventListener('readystatechange', function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
 });
+
+xhr.open('GET', 'https://sephora.p.rapidapi.com/us/products/v2/detail?productId=2535581&preferedSku=2535581');
+xhr.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+xhr.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+
+xhr.send(data);
 </script>
 
     <!--api code end-->
