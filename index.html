@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="main.css" rel="stylesheet" type="text/css"/>
+<title>SKinMX</title>
+</head>
+<body class="container-fluid">
+<nav class="navbar">
+    <a class="navbar-brand" href="#">
+      <img class="img-fluid" src="" alt="">
+    </a>
+    <button id="hamburger">&#9776;</button>
+    <ul class="nav nav-pills show-mobile-menu">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Routine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+        </nav>
+        <header>
+          <div class="jumbotron">
+            </div>
+          </header>
+  <div class="container text-center">
+    <h2>Welcome to SkinMX</h2>
+<h3> Find Your Perfect Max</h3>
+    </div>
+    <!--api code-->
+    <script src="third-party.js"></script>
+<script>
+const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = false;
+
+xhr.addEventListener('readystatechange', function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
+});
+
+xhr.open('GET', 'https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P436359&preferedSku=2131803');
+xhr.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+xhr.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+
+xhr.send(data);
+</script>
+
+    <!--api code end-->
+  <!-- Bootstrap JavaScript -->
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+     </script>
+   </body>
+ </html>
