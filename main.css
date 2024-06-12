@@ -39,3 +39,14 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 }
+.body {
+  padding: 50px;
+}
+
+.form-row {
+  display: flex;
+}
+.form-group {
+  max-width: 50%;
+    margin: 10px 20px;
+}

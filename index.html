@@ -36,6 +36,43 @@
     <h2>Welcome to SkinMX</h2>
 <h3> Find Your Perfect Max</h3>
     </div>
+    <div class="container body">
+      <form>
+        <div class="form-row">
+        <div class="form-group">
+      <label for="firstname">First name</label>
+      <input type="name" class="form-control" id="firstname" aria-describedby="name" placeholder="First name">
+    </div>
+    <div class="form-group">
+  <label for="lastname">Last name</label>
+  <input type="name" class="form-control" id="lastname" aria-describedby="name" placeholder="last name">
+</div>
+</div>
+<div class="form-group">
+<label for="email">Your email address</label>
+<input type="email" class="form-control" id="email" aria-describedby="name" placeholder="email">
+</div>
+<div class="form-group">
+<input type="radio" id="a-question" name="selector">
+  <label for="a-question">Sensitive</label>
+  <div class="checkbox"></div>
+</div>
+<div class="form-group">
+<input type="radio" id="b-question" name="selector">
+  <label for="b-question">Dry</label>
+  <div class="checkbox"></div>
+</div>
+<div class="form-group">
+<input type="radio" id="c-question" name="selector">
+  <label for="c-question">Combination</label>
+  <div class="checkbox"></div>
+</div>
+<div class="button">
+  <button type="submit" onclick="sensitive()">Find Your Product Match</button>
+</div>
+      </form>
+
+    </div>
     <!--api code-->
     <script src="third-party.js"></script>
 <script>
@@ -56,6 +93,42 @@ xhr.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
 
 xhr.send(data);
 </script>
+
+<!--test-script-->
+<script>
+let xhttp=new XMLHttpRequest();
+function sensitive() {
+  let response;
+  xhttp.onreadystatechange = function() {
+    if(this.status == 200 && this.readyState == 4) {
+      response= this.responseXML;
+      document.getElementById("900054").innerHTML = response.getElementByTagName("name").nodeValue;
+    }
+
+  }
+  xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P436359&preferedSku=2131803", true);
+  xhttp.send();
+}
+</script>
+<!--<script>
+function sensitive() {
+  var xhttp = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("a-question").innerHTML = this.responseText;
+      console.log(this.responseText);
+    }
+  };
+  xhr.open('GET', 'https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P436359&preferedSku=2131803', true);
+  xhr.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+  xhr.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+
+  xhr.send(data);
+
+}
+</script>-->
+<!--test-script end-->
+
 
     <!--api code end-->
   <!-- Bootstrap JavaScript -->
