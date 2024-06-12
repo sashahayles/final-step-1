@@ -37,7 +37,7 @@
 <h3> Find Your Perfect Max</h3>
     </div>
     <div class="container body">
-      <form>
+      <form onsubmit="sensitive(event)">
         <div class="form-row">
         <div class="form-group">
       <label for="firstname">First name</label>
@@ -68,7 +68,7 @@
   <div class="checkbox"></div>
 </div>
 <div class="button">
-  <button type="submit" onclick="sensitive()">Find Your Product Match</button>
+  <button type="submit">Find Your Product Match</button>
 </div>
       </form>
 
@@ -97,7 +97,8 @@ xhr.send(data);
 <!--test-script-->
 <script>
 let xhttp = new XMLHttpRequest();
-function sensitive() {
+function sensitive(event) {
+  event.preventDefault();
   let response;
   xhttp.onreadystatechange = function() {
     if(this.status == 200 && this.readyState == 4) {
@@ -107,7 +108,10 @@ function sensitive() {
 
   }
   xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P436359&preferedSku=2131803", true);
-  xhttp.send();
+  xhttp.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+  xhttp.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+
+  xhttp.send(data);
 }
 </script>
 <!--<script>
