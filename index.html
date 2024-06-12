@@ -96,12 +96,12 @@ xhr.send(data);
 
 <!--test-script-->
 <script>
-let xhttp=new XMLHttpRequest();
+let xhttp = new XMLHttpRequest();
 function sensitive() {
   let response;
   xhttp.onreadystatechange = function() {
     if(this.status == 200 && this.readyState == 4) {
-      response= this.responseXML;
+      response = this.responseXML;
       document.getElementById("900054").innerHTML = response.getElementByTagName("name").nodeValue;
     }
 
