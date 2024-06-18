@@ -1,4 +1,5 @@
 /*general css*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 .container-fluid {
 padding: 0 !important;
@@ -43,10 +44,46 @@ background-position: center;
   padding: 50px;
 }
 
-.form-row {
-  display: flex;
-}
-.form-group {
+
+.form-group,.button {
   max-width: 50%;
-    margin: 10px 20px;
+    margin: 30px auto;
+}
+.initial-routine {
+  text-align:center;
+}
+.row.skin-type .col-md-4:first-of-type {
+  background-color: #FBE9D9;
+}
+
+.row.skin-type .col-md-4:nth-of-type(2) {
+  background-color:#F7D0BA;
+}
+
+.row.skin-type .col-md-4:last-of-type {
+  background: rgb(251,233,217);
+background: linear-gradient(90deg, rgba(251,233,217,1) 22%, rgba(247,208,186,1) 74%);
+}
+.row.skin-type .col-md-4 {
+    padding: 15px 5px;
+    text-align: center;
+    margin: 5px;
+}
+@media (min-width: 768px) {
+    .skin-type .col-md-4 {
+        max-width: 30.333333%;
+    }
+}
+
+h2 {
+font-family: "Archivo Black", sans-serif;
+text-transform: uppercase;
+font-size: 32px;
+@media(min-width:992px) {
+  font-size: 42px;
+}
+}
+h3 {
+  font-family: "Archivo Black", sans-serif;
+
 }

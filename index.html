@@ -38,40 +38,45 @@
     </div>
     <div class="container body">
       <form onsubmit="sensitive(event)">
-        <div class="form-row">
-        <div class="form-group">
+        <div class="form-group row">
+          <div class="col-md-6">
       <label for="firstname">First name</label>
       <input type="name" class="form-control" id="firstname" aria-describedby="name" placeholder="First name">
     </div>
-    <div class="form-group">
+    <div class="col-md-6">
   <label for="lastname">Last name</label>
   <input type="name" class="form-control" id="lastname" aria-describedby="name" placeholder="last name">
 </div>
 </div>
-<div class="form-group">
+<div class="form-group row">
+  <div class="col-md-12">
 <label for="email">Your email address</label>
 <input type="email" class="form-control" id="email" aria-describedby="name" placeholder="email">
 </div>
-<div class="form-group">
+</div>
+<div class="form-group row skin-type">
+  <div class="col-md-4">
+<!--  <img src="imgs/oily-icon.svg" alt="oily skin icon" class="img-fluid img-thumbnail">-->
 <input type="radio" id="a-question" name="selector">
-  <label for="a-question">Sensitive</label>
+  <label for="a-question">Oily</label>
   <div class="checkbox"></div>
 </div>
-<div class="form-group">
+<div class="col-md-4">
 <input type="radio" id="b-question" name="selector">
   <label for="b-question">Dry</label>
   <div class="checkbox"></div>
 </div>
-<div class="form-group">
+<div class="col-md-4">
 <input type="radio" id="c-question" name="selector">
   <label for="c-question">Combination</label>
   <div class="checkbox"></div>
 </div>
+</div>
 <div class="button">
-  <button type="submit">Find Your Product Match</button>
+  <button type="submit" class="btn-cta">Find Your Product Match</button>
 </div>
       </form>
-       <div id="900054">
+       <div id="900054" class="initial-routine">
          <p> Your Match</p>
        </div>
 
@@ -110,7 +115,7 @@ function sensitive(event) {
     }
 
   }
-  xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P436359&preferedSku=2131803", true);
+  xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P431187&preferedSku=2046597", true);
   xhttp.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
   xhttp.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
 
