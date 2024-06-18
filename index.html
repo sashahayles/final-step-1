@@ -71,6 +71,9 @@
   <button type="submit">Find Your Product Match</button>
 </div>
       </form>
+       <div id="900054">
+         <p> Your Match</p>
+       </div>
 
     </div>
     <!--api code-->
@@ -102,8 +105,8 @@ function sensitive(event) {
   let response;
   xhttp.onreadystatechange = function() {
     if(this.status == 200 && this.readyState == 4) {
-      response = this.responseXML;
-      document.getElementById("900054").innerHTML = response.getElementByTagName("name").nodeValue;
+       response = JSON.parse(xhttp.response);
+      document.getElementById("900054").innerHTML = this.responseText;
     }
 
   }
