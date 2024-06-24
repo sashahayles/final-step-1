@@ -1,6 +1,32 @@
 /*general css*/
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+/*colors
+$primary-color: #FBE9D9; light pink
+$secondary-color #335134;
+$accent-color: #F7D0BA;
+$accent-color-2:#736372;
+*/
+body {
+  font-family: "Archivo Narrow";
+}
+.navbar {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .32);
+}
+.navbar-brand img {
+  max-width:55px;
+}
+nav li a {
+  font-family: "Archivo Narrow";
+  text-transform: uppercase;
+  color: #242038;
+  font-weight: bold;
+    letter-spacing: .8px;
+}
+nav li a:hover {
+  color: #736372;
+  transition: 200ms;
+}
 .container-fluid {
 padding: 0 !important;
  }
@@ -8,7 +34,7 @@ padding: 0 !important;
 .body-heading {
 text-align: center;
 font-size: 38px;
-text-transform: uppercase;
+text-transform: uppercase;f
 font-weight: 600;
 letter-spacing: 2px;
 }
@@ -40,14 +66,29 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 }
-.body {
-  padding: 50px;
+
+.home-title {
+  padding: 50px 15px 30px;
 }
+form {
+    border: 6px solid #fbe9d9;
+    max-width: 680px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .08);
+  }
 
-
-.form-group,.button {
+/*.form-group,.button {
   max-width: 50%;
     margin: 30px auto;
+}*/
+label {
+  color: #505a51;
+}
+.form-group {
+    margin-bottom: 1.8rem;
 }
 .initial-routine {
   text-align:center;
@@ -62,28 +103,62 @@ background-position: center;
 
 .row.skin-type .col-md-4:last-of-type {
   background: rgb(251,233,217);
-background: linear-gradient(90deg, rgba(251,233,217,1) 22%, rgba(247,208,186,1) 74%);
+  background: linear-gradient(90deg, rgba(251,233,217,1) 42%, rgba(247,208,186,1) 74%);
 }
 .row.skin-type .col-md-4 {
     padding: 15px 5px;
     text-align: center;
-    margin: 5px;
+    margin: 8px;
+    border-radius: 10px;
+    box-shadow: .5px .5px 8px rgba(0,0,0, .12);
 }
 @media (min-width: 768px) {
     .skin-type .col-md-4 {
         max-width: 30.333333%;
     }
 }
+label {
+  font-family: 'Archivo';
+}
+.col-md-4 label {
+    font-family: 'Archivo Black';
+    text-transform: uppercase;
+  }
 
-h2 {
+.home-title h2 {
 font-family: "Archivo Black", sans-serif;
 text-transform: uppercase;
 font-size: 32px;
+color: #335134;
+text-shadow: 1px 1px 5px rgba(22, 20, 20, .18);
 @media(min-width:992px) {
   font-size: 42px;
 }
 }
-h3 {
-  font-family: "Archivo Black", sans-serif;
-
+.home-title h3 {
+font-family: "Archivo", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #736372;
+  text-shadow: 1px 1px 5px rgba(22, 20, 20, .15);
+  font-weight: 500;
 }
+.btn-lg {
+  margin-top: 25px;
+    background-color: #335134;
+    color: #fbe9d9;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: 'Archivo';
+  }
+  .btn-lg:hover {
+    background-color: #fbe9d9;
+    color: #335134;
+    transition: 275ms;
+  }
+  .button {
+    text-align: center;
+  }
