@@ -44,19 +44,19 @@ font-size: 42px;
  }
  }
 
-/*navbar*/
-#hamburger {
-display: block;
-background-color: transparent;
-margin: auto 0 auto;
-font-size: 30px;
-text-decoration: none;
-border: 1px solid transparent;
- }
-@media (min-width: 992px) {
-#hamburger {
-display: none;
-}
+  /*navbar*/
+  #hamburger {
+  display: block;
+  background-color: transparent;
+  margin: auto 0 auto;
+  font-size: 30px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  }
+  @media (min-width: 992px) {
+  #hamburger {
+  display: none;
+  }
 }
 
 .jumbotron {

@@ -159,15 +159,24 @@ function sensitive(event) {
   xhttp.send(data);
 }
 </script>
+
 <!-- form script-->
-<script>
+<!--<script>
 let xhttp = new XMLHttpRequest();
-function results() {
+function results(event) {
   var formcheckA = document.getElementById("question-b");
   var formcheckB = document.getElementById("question-e");
-  if(formcheckA.checked && formcheckB.checked == true)
+  if(formcheckA.checked && formcheckB.checked == true) {
+    response = JSON.parse(xhttp.response);
+   document.getElementById("900054").innerHTML = this.responseText;
+ }
 }
-</script>
+xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P431187&preferedSku=2046597", true);
+xhttp.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+xhttp.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+
+xhttp.send(data);
+</script>-->
 <!-- form script end-->
 <!--<script>
 function sensitive() {
