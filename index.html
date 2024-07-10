@@ -148,7 +148,7 @@ function sensitive(event) {
   xhttp.onreadystatechange = function() {
     if(this.status == 200 && this.readyState == 4) {
        response = JSON.parse(xhttp.response);
-      document.getElementById("900054").innerHTML = response.seoName;
+      document.getElementById("900054").innerHTML = response.content.seoTitle + " " + response.content.targetUrl;
     }
 
   }
@@ -168,7 +168,7 @@ function results(event) {
   var formcheckB = document.getElementById("question-e");
   if(formcheckA.checked && formcheckB.checked == true) {
     response = JSON.parse(xhttp.response);
-   document.getElementById("900054").innerHTML = this.responseText;
+   document.getElementById("900054").innerHTML = response.content.seoTitle;
  }
 }
 xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P431187&preferedSku=2046597", true);
