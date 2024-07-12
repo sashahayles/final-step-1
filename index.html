@@ -164,8 +164,8 @@ function sensitive(event) {
 <script>
 let xhttp = new XMLHttpRequest();
 function results(event) {
-  var formcheckA = document.getElementById("question-b");
-  var formcheckB = document.getElementById("question-e");
+  var formcheckA = document.getElementById("b-question");
+  var formcheckB = document.getElementById("e-question");
   if(formcheckA.checked && formcheckB.checked == true) {
     response = JSON.parse(xhttp.response);
    document.getElementById("900054").innerHTML = response.content.seoTitle;
