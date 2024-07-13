@@ -38,7 +38,7 @@
     </div>
     <div class="container body">
       <div class="first-group">
-      <form onsubmit="sensitive(event)">
+      <form onsubmit="results(event)">
         <div class="form-group row">
           <div class="col-md-6">
       <label for="firstname">First Name</label>
@@ -113,7 +113,7 @@
   <button type="submit" class="btn btn-lg ">Find Your Product Match</button>
 </div>
       </form>
-       <div id="900054" class="initial-routine">
+       <div id="900098" class="initial-routine">
          <p> Your Match</p>
        </div>
 
@@ -140,7 +140,7 @@ xhr.send(data);
 </script>
 
 <!--test-script-->
-<script>
+<!--<script>
 let xhttp = new XMLHttpRequest();
 function sensitive(event) {
   event.preventDefault();
@@ -159,23 +159,29 @@ function sensitive(event) {
   xhttp.send(data);
 }
 </script>
-
+-->
+<!-- form script-->
 <!-- form script-->
 <script>
-let xhttp = new XMLHttpRequest();
 function results(event) {
-  var formcheckA = document.getElementById("b-question");
-  var formcheckB = document.getElementById("e-question");
-  if(formcheckA.checked && formcheckB.checked == true) {
-    response = JSON.parse(xhttp.response);
-   document.getElementById("900054").innerHTML = response.content.seoTitle;
- }
+let xhttp = new XMLHttpRequest();
+
+event.preventDefault();
+xhttp.onreadystatechange = function() {
+var formcheckA = document.getElementById("b-question");
+var formcheckB = document.getElementById("e-question");
+if(formcheckA.checked && formcheckB.checked == true) {
+response = JSON.parse(xhttp.response);
+document.getElementById("900098").innerHTML = response.content.seoTitle;
+  }
 }
+
 xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P431187&preferedSku=2046597", true);
 xhttp.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
 xhttp.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
 
 xhttp.send(data);
+}
 </script>
 <!-- form script end-->
 
