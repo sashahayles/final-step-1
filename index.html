@@ -114,7 +114,7 @@
 </div>
       </form>
        <div id="900098" class="initial-routine">
-         <p> Your Match</p>
+         <p></p>
        </div>
 
     </div>
@@ -161,21 +161,31 @@ function sensitive(event) {
 </script>
 -->
 <!-- form script-->
-<!-- form script-->
 <script>
 function results(event) {
 let xhttp = new XMLHttpRequest();
 
 event.preventDefault();
 xhttp.onreadystatechange = function() {
-var formcheckA = document.getElementById("b-question");
-var formcheckB = document.getElementById("e-question");
-if(formcheckA.checked && formcheckB.checked == true) {
-response = JSON.parse(xhttp.response);
-document.getElementById("900098").innerHTML = response.content.seoTitle;
-  }
-}
+var formcheckA = document.getElementById("a-question");
+var formcheckB = document.getElementById("b-question");
+var formcheckC = document.getElementById("c-question");
+var formcheckD = document.getElementById("d-question");
+var formcheckE = document.getElementById("e-question");
+var formcheckF = document.getElementById("f-question");
+var formcheckG = document.getElementById("g-question");
+var formcheckH = document.getElementById("h-question");
+var formcheckI = document.getElementById("i-question");
 
+if(formcheckB.checked && formcheckE.checked && formcheckG.checked == true) {
+response = JSON.parse(xhttp.response);
+document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+  }
+  if(formcheckB.checked && formcheckE.checked && formcheckH.checked == true) {
+  response = JSON.parse(xhttp.response);
+  document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+    }
+}
 xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P431187&preferedSku=2046597", true);
 xhttp.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
 xhttp.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
