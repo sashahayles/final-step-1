@@ -164,6 +164,8 @@ xhttp.send(data);
 <script>
 function results(event) {
 let xhttp = new XMLHttpRequest();
+let xhttpTwo = new XMLHttpRequest();
+let xhttpThree = new XMLHttpRequest();
 
 event.preventDefault();
 xhttp.onreadystatechange = function() {
@@ -180,11 +182,11 @@ var formcheckF = document.getElementById("f-question");
 
 
 if(formcheckA.checked && formcheckD.checked == true) {
-response = JSON.parse(xhttp.response);
+response = JSON.parse(xhttpThree.response);
 document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
 }
 if(formcheckA.checked && formcheckE.checked == true) {
-response = JSON.parse(xhttp.response);
+response = JSON.parse(xhttpTwo.response);
 document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
 }
 if(formcheckA.checked && formcheckF.checked == true) {
@@ -212,15 +214,27 @@ response = JSON.parse(xhttp.response);
 document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
 }
 if(formcheckC.checked && formcheckF.checked == true) {
-response = JSON.parse(xhttp.response);
+response = JSON.parse(xhttpTwo.response);
 document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
 }
 }
 xhttp.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P431187&preferedSku=2046597", true);
 xhttp.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
 xhttp.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
-
 xhttp.send(data);
+
+xhttpTwo.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P436359&preferedSku=2131803", true);
+xhttpTwo.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+xhttpTwo.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+xhttpTwo.send(data);
+
+xhttpThree.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P443833&preferedSku=2211605", true);
+xhttpThree.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+xhttpThree.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+xhttpThree.send(data);
+
+
+
 }
 </script>
 <!-- form script end-->
