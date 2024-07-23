@@ -1,0 +1,222 @@
+/*general css*/
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*colors*/
+$primary-color: #FBE9D9; /*light pink*/
+$secondary-color: #335134;/* dark green*/
+$accent-color: #F7D0BA;
+$accent-color-2:#736372;
+$dark-purple: #252038;
+
+$heading-font: 'Archivo Black';
+$body-font: 'Poppins';
+
+body {
+  font-family: $body-font;
+  font-size: 14px;
+}
+.navbar {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .32);
+    background-color: $dark-purple;
+    padding: .1rem 1rem;
+}
+.navbar-brand img {
+  max-width: 80px;
+}
+nav li a {
+  font-family: $body-font;
+  text-transform: uppercase;
+  color: $primary-color;
+  font-weight: bold;
+    letter-spacing: .8px;
+}
+nav li a:hover {
+  color: #736372;
+  transition: 200ms;
+}
+.container-fluid {
+padding: 0 !important;
+ }
+
+.body-heading {
+text-align: center;
+font-size: 38px;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 2px;
+}
+@media (min-width: 992px) {
+.body-heading {
+font-size: 42px;
+}
+ }
+
+  /*navbar*/
+  #hamburger {
+  display: block;
+  background-color: transparent;
+  margin: auto 0 auto;
+  font-size: 30px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  @media (min-width: 992px) {
+  display: none;
+  }
+}
+
+.jumbotron {
+background-image: url('../imgs/smiling-women.jpg');
+padding: 10rem 5em 6rem;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 0;
+@media(min-width: 992px) {
+  padding: 13rem 5em 8rem;
+}
+}
+.overlay {
+  padding: 50px 30px 30px;
+  color: $primary-color;
+}
+.overlay h1 {
+  font-size: 38px;
+  font-family: $heading-font;
+  text-shadow: 2px 2px 7px rgba(88, 44, 25, .65);
+  margin-bottom: 0;
+  @media(min-width: 768px) {
+    font-size: 70px;
+  }
+}
+.overlay h2 {
+  font-size: 24px;
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(88, 44, 25, .65);
+  @media(min-width: 768px) {
+    font-size: 42px;
+  }
+}
+
+.home-title {
+  padding: 50px 15px 30px;
+h2 {
+  font-family: $body-font;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
+  color: $secondary-color;
+  margin-bottom: 0;
+  @media(min-width: 768px) {
+    font-size: 34px;
+    }
+  }
+  h3 {
+    font-family: $heading-font;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: $accent-color-2;
+    @media(min-width: 768px) {
+      font-size: 38px;
+      }
+  }
+}
+
+form {
+    border: 6px solid $accent-color;
+    max-width: 680px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .08);
+  }
+
+  .form-icon {
+      max-width: 30%;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+      @media(min-width: 992px) {
+        max-width: 55%;
+      }
+    }
+
+.form-group {
+    margin-bottom: 1.8rem;
+}
+.initial-routine {
+  text-align:center;
+}
+.row.skin-type .col-md-4:first-of-type {
+  background-color: $primary-color;
+}
+
+.row.skin-type .col-md-4:nth-of-type(2) {
+  background-color:$accent-color;
+}
+
+.row.skin-type .col-md-4:last-of-type {
+  background: rgb(251,233,217);
+  background: linear-gradient(90deg, rgba(251,233,217,1) 42%, rgba(247,208,186,1) 74%);
+}
+.row.skin-type .col-md-4 {
+    padding: 15px 5px;
+    text-align: center;
+    margin: 8px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0,0,0, .12);
+    transition: 250ms;
+    &:hover {
+      box-shadow: 4px 5px 8px rgba(0,0,0, .18);
+      transition: 250ms;
+      transform: scale(1.04);
+    }
+}
+@media (min-width: 768px) {
+    .skin-type .col-md-4 {
+        max-width: 30.333333%;
+    }
+}
+label {
+  font-family: $heading-font;
+  color:$secondary-color;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  input.form-control {
+      font-size: 16px;
+}
+.col-md-4 label {
+    font-family: $heading-font;
+    font-weight: bold;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+
+.btn-lg {
+  margin-top: 25px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: $body-font;
+  }
+  .btn-lg:hover {
+    background-color: $dark-purple;
+    color: $primary-color;
+    transition: 275ms;
+  }
+  .button {
+    text-align: center;
+  }
+  .initial-routine {
+    margin: 15px auto;
+  }

@@ -1,40 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <title> SkinMx</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="main.css" rel="stylesheet" type="text/css"/>
+<link href="css/main.css" rel="stylesheet" type="text/css"/>
 <title>SKinMX</title>
 </head>
 <body class="container-fluid">
 <nav class="navbar">
 <a class="navbar-brand" href="#">
-<img class="img-fluid" src="imgs/logo.png" alt="">
+<img class="img-fluid" src="imgs/logo3.png" alt="">
 </a>
 <button id="hamburger">&#9776;</button>
 <ul class="nav nav-pills show-mobile-menu">
 <li class="nav-item">
-<a class="nav-link" href="#">Home</a>
+<a class="nav-link" href="file:///C:/Users/User/UF-examples/mmc6950/step1/index.html">Home</a>
 </li>
-<li class="nav-item">
+<!--<li class="nav-item">
 <a class="nav-link" href="#">Routine</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="#">Contact Us</a>
-  </li>
+</li>-->
 </ul>
 </nav>
 <header>
-<div class="jumbotron">
+  <div class="jumbotron">
+  <div class="overlay text-center margin-top-2x">
+    <h1 class="hero-heading text-uppercase"> SkinMx</h1>
+    <h2> Discover What Works For You...</h2>
   </div>
+</div>
 </header>
-<div class="container text-center home-title">
-<h2>Welcome to SkinMX</h2>
-<h3> Find Your Perfect Max</h3>
+<div class="container">
+  <div class="text-center home-title">
+<h2>Take the Quiz.</h2>
+<h3> Find Your Match.</h3>
 </div>
 <div class="container body">
 <div class="first-group">
@@ -57,37 +63,48 @@
 </div>
 <div class="form-group row skin-type">
 <div class="col-md-4">
-<!--  <img src="imgs/oily-icon.svg" alt="oily skin icon" class="img-fluid img-thumbnail">-->
+<label for="a-question">
+  <img class="img-fluid form-icon" src="imgs/oily.png" alt="oily icon">
 <input type="radio" id="a-question" name="selector-a">
-<label for="a-question">Oily</label>
+Oily
+</label>
 <div class="checkbox"></div>
 </div>
 <div class="col-md-4">
+  <label for="b-question">
+  <img class="img-fluid form-icon" src="imgs/dry.png" alt="dry icon">
 <input type="radio" id="b-question" name="selector-a">
-<label for="b-question">Dry</label>
+Dry</label>
 <div class="checkbox"></div>
 </div>
 <div class="col-md-4">
+  <label for="c-question">
+  <img class="img-fluid form-icon" src="imgs/combo.png" alt="combination icon">
 <input type="radio" id="c-question" name="selector-a">
-<label for="c-question">Combination</label>
+Combination</label>
 <div class="checkbox"></div>
 </div>
 </div>
 <div class="form-group row skin-type">
 <div class="col-md-4">
-<!--  <img src="imgs/oily-icon.svg" alt="oily skin icon" class="img-fluid img-thumbnail">-->
+  <label for="a-question">
+  <img class="img-fluid form-icon" src="imgs/acne.png" alt="acne prone icon">
 <input type="radio" id="d-question" name="selector-b">
-<label for="a-question">Acne Prone</label>
+Acne Prone</label>
 <div class="checkbox"></div>
 </div>
 <div class="col-md-4">
+  <label for="b-question">
+    <img class="img-fluid form-icon" src="imgs/combination.png" alt="textured icon">
 <input type="radio" id="e-question" name="selector-b">
-<label for="b-question">Textured</label>
+Textured</label>
 <div class="checkbox"></div>
 </div>
 <div class="col-md-4">
+  <label for="c-question">
+    <img class="img-fluid form-icon" src="imgs/dark-spots.png" alt="dark spot icon">
 <input type="radio" id="f-question" name="selector-b">
-<label for="c-question">Dark Spots</label>
+Dark Spots</label>
 <div class="checkbox"></div>
 </div>
 </div>
@@ -108,13 +125,16 @@
 <label for="c-question">Unsure</label>
 <div class="checkbox"></div>
 </div>-->
+<div class="buttons text-center">
+
+<button type="submit" class="btn btn-lg ">Your Product Match</button>
+<button type="reset" class="btn btn-lg">Take the Quiz Again</button>
+
 </div>
-<div class="button">
-<button type="submit" class="btn btn-lg ">Find Your Product Match</button>
-</div>
-</form>
 <div id="900098" class="initial-routine">
 <p></p>
+</div>
+</form>
 </div>
 
 </div>
@@ -332,7 +352,7 @@ xhttpNine.send(data);
 </script>
 <!-- form script end-->
 
-
+</div>
 
 <!--<script>
 function sensitive() {
