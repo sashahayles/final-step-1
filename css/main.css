@@ -87,7 +87,7 @@ nav li a:hover {
       font-size: 42px; } }
 
 .home-title {
-  padding: 50px 15px 30px; }
+  padding: 50px 15px 20px; }
   .home-title h2 {
     font-family: "Poppins";
     font-size: 24px;
@@ -109,12 +109,12 @@ nav li a:hover {
         font-size: 38px; } }
 
 form {
-  border: 6px solid #F7D0BA;
-  max-width: 680px;
+  border: 10px solid #F7D0BA;
+  max-width: 700px;
   margin: auto;
   margin-bottom: 30px;
   border-radius: 20px;
-  padding: 30px;
+  padding: 40px 30px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08); }
 
 .form-icon {
@@ -126,11 +126,14 @@ form {
     .form-icon {
       max-width: 55%; } }
 
-.form-group {
-  margin-bottom: 1.8rem; }
+.form-group.row .col-md-6 {
+  margin: 8px auto; }
 
 .initial-routine {
   text-align: center; }
+
+.skin-type:nth-of-type(1) {
+  margin-top: 20px; }
 
 .row.skin-type .col-md-4:first-of-type {
   background-color: #FBE9D9; }
@@ -152,7 +155,7 @@ form {
   .row.skin-type .col-md-4:hover {
     box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.18);
     transition: 250ms;
-    transform: scale(1.04); }
+    transform: scale(1.03); }
 
 @media (min-width: 768px) {
   .skin-type .col-md-4 {
@@ -161,7 +164,8 @@ label {
   font-family: "Archivo Black";
   color: #335134;
   font-size: 18px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 8px auto; }
 
 input.form-control {
   font-size: 16px; }
@@ -169,12 +173,12 @@ input.form-control {
 .col-md-4 label {
   font-family: "Archivo Black";
   font-weight: bold;
-  letter-spacing: .5px;
+  letter-spacing: .35px;
   text-transform: uppercase;
   font-size: 16px; }
 
 .btn-lg {
-  margin-top: 25px;
+  margin-top: 15px;
   background-color: #335134;
   color: #FBE9D9;
   text-align: center;
@@ -182,6 +186,7 @@ input.form-control {
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 18px;
+  min-width: 260px;
   font-family: "Poppins"; }
 
 .btn-lg:hover {
@@ -193,6 +198,6 @@ input.form-control {
   text-align: center; }
 
 .initial-routine {
-  margin: 15px auto; }
+  margin: 30px auto 15px; }
 
 /*# sourceMappingURL=main.css.map */
