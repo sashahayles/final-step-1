@@ -145,8 +145,15 @@ form {
     }
     .form-group.row .col-md-6 {
       margin: 8px auto;
+      input {
+        border: 3px solid $secondary-color;
+      }
     }
-
+    .form-group.row .col-md-12 {
+      input {
+        border: 3px solid $secondary-color;
+      }
+    }
 .initial-routine {
   text-align:center;
 }
@@ -168,7 +175,7 @@ form {
 .row.skin-type .col-md-4 {
     padding: 15px 5px;
     text-align: center;
-    margin: 8px;
+    margin: 8px auto;
     border-radius: 10px;
     box-shadow: 1px 1px 8px rgba(0,0,0, .12);
     transition: 250ms;
@@ -183,6 +190,9 @@ form {
         max-width: 30.333333%;
     }
 }
+.form-group:nth-of-type(3) {
+  margin-top: 30px;
+}
 label {
   font-family: $heading-font;
   color:$secondary-color;
@@ -190,8 +200,19 @@ label {
     text-transform: uppercase;
     margin: 8px auto;
   }
-  input.form-control {
+  .skin-type input {
+    appearance: none;
+    border-radius: 50%;
+    background-color: $primary-color;
+    border: 6px solid $primary-color;
+    outline: 3px solid $secondary-color;
+    &:active, &:focus {
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+    }
+  .form-control {
       font-size: 16px;
+    }
 }
 .col-md-4 label {
     font-family: $heading-font;

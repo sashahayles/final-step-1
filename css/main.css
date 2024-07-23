@@ -128,6 +128,11 @@ form {
 
 .form-group.row .col-md-6 {
   margin: 8px auto; }
+  .form-group.row .col-md-6 input {
+    border: 3px solid #335134; }
+
+.form-group.row .col-md-12 input {
+  border: 3px solid #335134; }
 
 .initial-routine {
   text-align: center; }
@@ -148,7 +153,7 @@ form {
 .row.skin-type .col-md-4 {
   padding: 15px 5px;
   text-align: center;
-  margin: 8px;
+  margin: 8px auto;
   border-radius: 10px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.12);
   transition: 250ms; }
@@ -160,6 +165,9 @@ form {
 @media (min-width: 768px) {
   .skin-type .col-md-4 {
     max-width: 30.333333%; } }
+.form-group:nth-of-type(3) {
+  margin-top: 30px; }
+
 label {
   font-family: "Archivo Black";
   color: #335134;
@@ -167,8 +175,17 @@ label {
   text-transform: uppercase;
   margin: 8px auto; }
 
-input.form-control {
-  font-size: 16px; }
+.skin-type input {
+  appearance: none;
+  border-radius: 50%;
+  background-color: #FBE9D9;
+  border: 6px solid #FBE9D9;
+  outline: 3px solid #335134; }
+  .skin-type input:active, .skin-type input:focus {
+    border-color: #335134;
+    background-color: #335134; }
+  .skin-type input .form-control {
+    font-size: 16px; }
 
 .col-md-4 label {
   font-family: "Archivo Black";
