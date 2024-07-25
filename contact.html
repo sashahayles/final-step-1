@@ -12,8 +12,8 @@
 </head>
 <body class="container-fluid">
 <nav class="navbar">
-<a class="navbar-brand" href="#">
-<img class="img-fluid" src="imgs/logo3.png" alt="">
+<a class="navbar-brand" href="/Users/User/UF-examples/mmc6950/step1/index.html">
+<img class="img-fluid" src="imgs/logo3.png" alt="skin-mix logo">
 </a>
 <button id="hamburger">&#9776;</button>
 <ul class="nav nav-pills show-mobile-menu">
@@ -35,15 +35,15 @@
   </div>
 </div>
 </header>
-<div id="main-content">
+<div id="main-content contact">
 <div class="container">
   <div class="text-center home-title">
 <h2>Got a Question?</h2>
-<h3> We'll do our best to get back to you as soon as possible.</h3>
+<p><b> We'll do our best to get back to you as soon as possible.</b></p>
 </div>
 <div class="container body">
 <div class="first-group">
-<form onsubmit="results(event)">
+<form action="https://getform.io/f/bejyenva" method="POST">
 <div class="form-group row">
 <div class="col-md-6">
 <label for="firstname">First Name</label>
@@ -60,110 +60,40 @@
 <input type="email" class="form-control" id="email" aria-describedby="name" placeholder="Email">
 </div>
 </div>
-<div class="form-group row skin-type">
-<div class="col-md-4">
-<label for="a-question">
-  <img class="img-fluid form-icon" src="imgs/oily.png" alt="oily icon">
-<input type="radio" id="a-question" name="selector-a">
-Oily
-</label>
-<div class="checkbox"></div>
-</div>
-<div class="col-md-4">
-  <label for="b-question">
-  <img class="img-fluid form-icon" src="imgs/dry.png" alt="dry icon">
-<input type="radio" id="b-question" name="selector-a">
-Dry</label>
-<div class="checkbox"></div>
-</div>
-<div class="col-md-4">
-  <label for="c-question">
-  <img class="img-fluid form-icon" src="imgs/combo.png" alt="combination icon">
-<input type="radio" id="c-question" name="selector-a">
-Combination</label>
-<div class="checkbox"></div>
-</div>
-</div>
-<div class="form-group row skin-type">
-<div class="col-md-4">
-  <label for="a-question">
-  <img class="img-fluid form-icon" src="imgs/acne.png" alt="acne prone icon">
-<input type="radio" id="d-question" name="selector-b">
-Acne Prone</label>
-<div class="checkbox"></div>
-</div>
-<div class="col-md-4">
-  <label for="b-question">
-    <img class="img-fluid form-icon" src="imgs/combination.png" alt="textured icon">
-<input type="radio" id="e-question" name="selector-b">
-Textured</label>
-<div class="checkbox"></div>
-</div>
-<div class="col-md-4">
-  <label for="c-question">
-    <img class="img-fluid form-icon" src="imgs/dark-spots.png" alt="dark spot icon">
-<input type="radio" id="f-question" name="selector-b">
-Dark Spots</label>
-<div class="checkbox"></div>
-</div>
-</div>
-<!--<div class="form-group row skin-type">
-<div class="col-md-4">-->
-<!--  <img src="imgs/oily-icon.svg" alt="oily skin icon" class="img-fluid img-thumbnail">-->
-<!--<input type="radio" id="g-question" name="selector-c">
-<label for="a-question">sensitive</label>
-<div class="checkbox"></div>
-</div>
-<div class="col-md-4">
-<input type="radio" id="h-question" name="selector-c">
-<label for="b-question">Not Sensitive</label>
-<div class="checkbox"></div>
-</div>
-<div class="col-md-4">
-<input type="radio" id="i-question" name="selector-c">
-<label for="c-question">Unsure</label>
-<div class="checkbox"></div>
-</div>-->
+<div class="form-group row ">
+<div class="col-md-12">
+  <label for="textarea">Comments</label>
+<textarea name="Comments" rows="5" placeholder="Enter your message here...">
+</textarea>
+    </div>
+  </div>
 <div class="buttons text-center">
 
-<button type="submit" class="btn btn-lg ">Your Product Match</button>
-<button type="reset" class="btn btn-lg">Take the Quiz Again</button>
+<button type="submit" class="btn btn-lg ">Send Your Message</button>
 
-</div>
-<div id="900098" class="initial-routine">
-<p></p>
 </div>
 </form>
 </div>
 
 </div>
-<!--api code-->
-<script src="js/third-party.js"></script>
+</div>
+<footer>
+  <div class="container">
+  <div class="row flex-center-md">
+    <div class="col-sm-4 col-sm-offset-1">
+  <a class="footer-logo" href="/Users/User/UF-examples/mmc6950/step1/index.html">
+  <img class="img-fluid" src="imgs/logo.png" alt="skinmix logo">
+  </a>
+</div>
+<div class="col-sm-7">
+  <h4> Ready to Take the Quiz? <a class="footer-logo" href="/Users/User/UF-examples/mmc6950/step1/index.html">Click Here!</a></h4>
+</div>
+</div>
+</div>
+</footer>
+<!--js scripts-->
 <script src="js/main.js"></script>
 
-</div>
-
-<!--<script>
-function sensitive() {
-var xhttp = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-document.getElementById("a-question").innerHTML = this.responseText;
-console.log(this.responseText);
-}
-};
-xhr.open('GET', 'https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P436359&preferedSku=2131803', true);
-xhr.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
-xhr.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
-
-xhr.send(data);
-
-}
-</script>-->
-<!--test-script end-->
-
-
-<!--api code end-->
 <!-- Bootstrap JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>

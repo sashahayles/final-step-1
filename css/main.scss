@@ -71,29 +71,31 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 border-radius: 0;
+box-shadow: inset 0 0 0 1000px rgba(45, 47, 45, .22);
 @media(min-width: 992px) {
   padding: 13rem 5em 8rem;
 }
 }
+
 .overlay {
   padding: 50px 30px 30px;
-  color: $primary-color;
+  color: lighten($primary-color, 5%);
 }
 .overlay h1 {
   font-size: 38px;
   font-family: $heading-font;
-  text-shadow: 2px 2px 7px rgba(88, 44, 25, .65);
+  text-shadow: 2px 2px 7px rgba(19, 18, 18, .65);
   margin-bottom: 0;
   @media(min-width: 768px) {
     font-size: 70px;
   }
 }
 .overlay h2 {
-  font-size: 24px;
+  font-size: 26px;
   font-family: 'Cormorant Garamond', sans-serif;
   font-style: italic;
   font-weight: 600;
-  text-shadow: 1px 1px 5px rgba(88, 44, 25, .65);
+  text-shadow: 1px 1px 5px rgba(19, 18, 18, .65);
   @media(min-width: 768px) {
     font-size: 42px;
   }
@@ -150,12 +152,18 @@ form {
       }
     }
     .form-group.row .col-md-12 {
-      input {
+      input, textarea {
         border: 3px solid $secondary-color;
+        border-radius: .25rem;
       }
     }
+
 .initial-routine {
   text-align:center;
+  margin: 20px auto;
+}
+.skin-quiz .form-group:nth-of-type(3) {
+margin-top: 2em;
 }
 .skin-type:nth-of-type(1) {
   margin-top: 20px;
@@ -190,9 +198,7 @@ form {
         max-width: 30.333333%;
     }
 }
-.form-group:nth-of-type(3) {
-  margin-top: 30px;
-}
+
 label {
   font-family: $heading-font;
   color:$secondary-color;
@@ -200,12 +206,14 @@ label {
     text-transform: uppercase;
     margin: 8px auto;
   }
+
   .skin-type input {
     appearance: none;
     border-radius: 50%;
     background-color: $primary-color;
-    border: 6px solid $primary-color;
-    outline: 3px solid $secondary-color;
+    border: 5px solid $primary-color;
+    outline: 2px solid $secondary-color;
+    outline-offset: 1px;
     &:active, &:focus {
     border-color: $secondary-color;
     background-color: $secondary-color;
@@ -232,8 +240,10 @@ label {
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 18px;
-    min-width: 260px;
     font-family: $body-font;
+    @media(min-width: 768px) {
+        min-width: 260px;
+    }
   }
   .btn-lg:hover {
     background-color: $dark-purple;
@@ -246,3 +256,69 @@ label {
   .initial-routine {
     margin: 30px auto 15px;
   }
+
+  /*contact page*/
+  .jumbotron-contact {
+  background-image: url('../imgs/pexels-ron-lach-8142196.jpg');
+  padding: 10rem 5em 6rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1000px rgba(45, 47, 45, .22);
+  @media(min-width: 992px) {
+    padding: 13rem 5em 8rem;
+  }
+  }
+
+  .home-title p {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  width:100%;
+}
+
+
+/*footer*/
+footer {
+  background-color: $primary-color;
+  padding: 5px;
+  margin-top: 20px;
+  .img-fluid {
+    max-width: 70px;
+  }
+  h4 {
+    color: $secondary-color;
+    font-weight: 600;
+    a {
+      font-weight: 800;
+      color: $secondary-color;
+      transition: 200ms;
+      &:hover {
+        text-decoration: none;
+        color: $dark-purple;
+        transition: 200ms;
+        text-shadow: .5px .5px 5px rgba($dark-purple, .12);
+      }
+    }
+  }
+
+  .col-sm-7 {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align:center;
+  }
+  @media(max-width:992px) {
+  .col-sm-4.col-sm-offset-1 {
+    margin: 10px auto;
+    text-align:center;
+    }
+    .col-sm-7 {
+      justify-content: center;
+    }
+  }
+}

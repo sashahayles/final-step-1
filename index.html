@@ -4,6 +4,7 @@
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,8 +13,8 @@
 </head>
 <body class="container-fluid">
 <nav class="navbar">
-<a class="navbar-brand" href="#">
-<img class="img-fluid" src="imgs/logo3.png" alt="">
+<a class="navbar-brand" href="/Users/User/UF-examples/mmc6950/step1/index.html">
+<img class="img-fluid" src="imgs/logo3.png" alt="skinmix logo">
 </a>
 <button id="hamburger">&#9776;</button>
 <ul class="nav nav-pills show-mobile-menu">
@@ -26,10 +27,11 @@
 <li class="nav-item">
   <a class="nav-link" href="/Users/User/UF-examples/mmc6950/step1/contact.html">Contact Us</a>
 </li>
+<li><div class="g-signin2" data-onsuccess="onSignIn">Sign In</div></li>
 </ul>
 </nav>
 <header>
-  <div class="jumbotron">
+  <div class="jumbotron home">
   <div class="overlay text-center margin-top-2x">
     <h1 class="hero-heading text-uppercase"> SkinMx</h1>
     <h2> Discover What Works For You...</h2>
@@ -44,7 +46,7 @@
 </div>
 <div class="container body">
 <div class="first-group">
-<form onsubmit="results(event)">
+<form onsubmit="results(event)" class="skin-quiz">
 <div class="form-group row">
 <div class="col-md-6">
 <label for="firstname">First Name</label>
@@ -138,32 +140,26 @@ Dark Spots</label>
 </div>
 
 </div>
-<!--api code-->
+</div>
+<footer>
+  <div class="container">
+  <div class="row flex-center-md">
+    <div class="col-sm-4 col-sm-offset-1">
+  <a class="footer-logo" href="/Users/User/UF-examples/mmc6950/step1/index.html">
+  <img class="img-fluid" src="imgs/logo.png" alt="skinmix logo">
+  </a>
+</div>
+<div class="col-sm-7">
+  <h4> Got questions? <a class="footer-logo" href="/Users/User/UF-examples/mmc6950/step1/contact.html">Contact Us!</a></h4>
+</div>
+</div>
+</div>
+</footer>
+
+<!--scripts-->
 <script src="js/third-party.js"></script>
 <script src="js/main.js"></script>
-
-</div>
-
-<!--<script>
-function sensitive() {
-var xhttp = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-if (this.readyState == 4 && this.status == 200) {
-document.getElementById("a-question").innerHTML = this.responseText;
-console.log(this.responseText);
-}
-};
-xhr.open('GET', 'https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P436359&preferedSku=2131803', true);
-xhr.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
-xhr.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
-
-xhr.send(data);
-
-}
-</script>-->
-<!--test-script end-->
-
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <!--api code end-->
 <!-- Bootstrap JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
