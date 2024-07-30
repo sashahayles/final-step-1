@@ -31,8 +31,11 @@ function results(event) {
   let xhttpEight = new XMLHttpRequest();
   let xhttpNine = new XMLHttpRequest();
   let xhttpTen = new XMLHttpRequest();
-
+//moisturizer
   let xhttpEleven = new XMLHttpRequest();
+  let xhttpTwelve = new XMLHttpRequest();
+  let xhttpThirteen = new XMLHttpRequest();
+  let xhttpFourteen = new XMLHttpRequest();
 
   event.preventDefault();
   var formcheckA = document.getElementById("a-question");
@@ -56,7 +59,7 @@ function results(event) {
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
       setTimeout(() => {
-        xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P466153&preferedSku=2412856", true);
+        xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P482006&preferedSku=2740637", true);
         xhttpEleven.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
         xhttpEleven.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
         xhttpEleven.send(data);
@@ -81,6 +84,17 @@ function results(event) {
         response = JSON.parse(xhttpTwo.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpTwelve.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P466153&preferedSku=2412856", true);
+        xhttpTwelve.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpTwelve.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpTwelve.send(data);
+        xhttpEleven.onreadystatechange = function() {
+          console.log(xhttpTwelve.response);
+          response = JSON.parse(xhttpTwelve.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }, 2000)
     }
   }
   if(formcheckA.checked) {
@@ -95,6 +109,17 @@ function results(event) {
         response = JSON.parse(xhttpFour.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpThirteen.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P510561&preferedSku=2647568", true);
+        xhttpThirteen.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpThirteen.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpThirteen.send(data);
+        xhttpThirteen.onreadystatechange = function() {
+          console.log(xhttpThirteen.response);
+          response = JSON.parse(xhttpThirteen.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }, 2000)
     }
   }
   if(formcheckB.checked) {
@@ -109,6 +134,17 @@ function results(event) {
         response = JSON.parse(xhttpFive.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P482006&preferedSku=2740637", true);
+        xhttpEleven.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpEleven.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpEleven.send(data);
+        xhttpEleven.onreadystatechange = function() {
+          console.log(xhttpEleven.response);
+          response = JSON.parse(xhttpEleven.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }, 2000)
     }
   }
   if(formcheckB.checked) {
@@ -123,6 +159,17 @@ function results(event) {
         response = JSON.parse(xhttpSix.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpTwelve.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P466153&preferedSku=2412856", true);
+        xhttpTwelve.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpTwelve.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpTwelve.send(data);
+        xhttpTwelve.onreadystatechange = function() {
+          console.log(xhttpTwelve.response);
+          response = JSON.parse(xhttpTwelve.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }, 2000)
     }
   }
   if(formcheckB.checked) {
@@ -137,6 +184,17 @@ function results(event) {
         response = JSON.parse(xhttpSeven.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpThirteen.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P510561&preferedSku=2647568", true);
+        xhttpThirteen.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpThirteen.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpThirteen.send(data);
+        xhttpThirteen.onreadystatechange = function() {
+          console.log(xhttpThirteen.response);
+          response = JSON.parse(xhttpThirteen.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }, 2000)
     }
   }
   if(formcheckC.checked) {
@@ -151,6 +209,17 @@ function results(event) {
         response = JSON.parse(xhttp.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpFourteen.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P507952&preferedSku=2714863", true);
+        xhttpFourteen.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpFourteen.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpFourteen.send(data);
+        xhttpEleven.onreadystatechange = function() {
+          console.log(xhttpFourteen.response);
+          response = JSON.parse(xhttpFourteen.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }, 2000)
     }
   }
   if(formcheckC.checked) {
@@ -165,6 +234,17 @@ function results(event) {
         response = JSON.parse(xhttpEight.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P466153&preferedSku=2412856", true);
+        xhttpEleven.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpEleven.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpEleven.send(data);
+        xhttpEleven.onreadystatechange = function() {
+          console.log(xhttpEleven.response);
+          response = JSON.parse(xhttpEleven.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }, 2000)
     }
   }
   if(formcheckC.checked) {
@@ -179,6 +259,17 @@ function results(event) {
         response = JSON.parse(xhttpNine.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P466153&preferedSku=2412856", true);
+        xhttpEleven.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpEleven.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpEleven.send(data);
+        xhttpEleven.onreadystatechange = function() {
+          console.log(xhttpEleven.response);
+          response = JSON.parse(xhttpEleven.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }, 2000)
     }
   }
   if(productBtn.form) {

@@ -140,6 +140,9 @@ form {
   text-align: center;
   margin: 20px auto; }
 
+.initial-routine {
+  text-align: left; }
+
 .skin-type:nth-of-type(1) {
   margin-top: 20px; }
 
@@ -222,7 +225,7 @@ h4.type {
 .button {
   text-align: center; }
 
-.initial-routine {
+.initial-routine, .routine-results {
   margin: 30px auto 15px; }
 
 /*contact page*/
