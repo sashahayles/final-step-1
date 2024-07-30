@@ -57,13 +57,13 @@ function results(event) {
       }
       setTimeout(() => {
         xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P466153&preferedSku=2412856", true);
-        xhttpThree.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
-        xhttpThree.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
-        xhttpThree.send(data);
-        xhttpThree.onreadystatechange = function() {
-          console.log(xhttpThree.response);
-          response = JSON.parse(xhttpThree.response);
-          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.
+        xhttpEleven.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpEleven.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpEleven.send(data);
+        xhttpEleven.onreadystatechange = function() {
+          console.log(xhttpEleven.response);
+          response = JSON.parse(xhttpEleven.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
       }, 2000)
     }
