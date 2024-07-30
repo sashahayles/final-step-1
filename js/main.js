@@ -168,7 +168,7 @@ function results(event) {
       }
     }
   }
-  if(productBtn.checked) {
+  if(productBtn.form) {
       xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
       //  xhttpNine.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
       //xhttpNine.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
@@ -181,3 +181,4 @@ function results(event) {
       }
     }
   }
+}
