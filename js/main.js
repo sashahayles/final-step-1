@@ -175,7 +175,7 @@ function results(event) {
         xhttpTen.onreadystatechange = function() {
           response = JSON.parse(xhttpTen.response);
           console.log(xhttpTen.response.userNote[0].type);
-          document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+          document.getElementById("900098").innerHTML = response.userNote[0].type;
         }
       }
     }
