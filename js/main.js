@@ -160,8 +160,8 @@ function results(event) {
       xhttpNine.send(data);
 
       xhttpNine.onreadystatechange = function() {
-        console.log(response.userNote[0].type);
         response = JSON.parse(xhttpNine.response);
+        console.log(response.userNote[0].type);
         document.getElementById("900098").innerHTML = response.userNote[0].type;
       }
     }
