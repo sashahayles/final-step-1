@@ -168,7 +168,7 @@ console.log(formcheckA.checked);
     }
   }
   if (formcheckD.checked) {
-    xhttp.open("GET", "http://demo3919838.mockable.io/", true);
+    xhttp.open("GET", "http://demo3919838.mockable.io/thanks", true);
     xhttp.send(data);
 
     xhttp.onreadystatechange = function() {
