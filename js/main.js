@@ -30,7 +30,7 @@ function results(event) {
   let xhttpSeven = new XMLHttpRequest();
   let xhttpEight = new XMLHttpRequest();
   let xhttpNine = new XMLHttpRequest();
-
+  let xhttpTen = new XMLHttpRequest();
   event.preventDefault();
   var formcheckA = document.getElementById("a-question");
   var formcheckB = document.getElementById("b-question");
@@ -39,7 +39,6 @@ function results(event) {
   var formcheckE = document.getElementById("e-question");
   var formcheckF = document.getElementById("f-question");
 
-console.log(formcheckA.checked);
     if(formcheckA.checked) {
       if(formcheckD.checked) {
         xhttpThree.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P443833&preferedSku=2211605", true);
@@ -167,15 +166,18 @@ console.log(formcheckA.checked);
       }
     }
   }
-}
-  if (formcheckD.checked) {
-    xhttp.open("GET", "https://demo3919838.mockable.io/thanks", true);
-    xhttp.send(data);
+  if(formcheckD.checked) {
+    if(formcheckE.checked) {
+      if(formcheckF.checked) {
+        xhttpTen.open("GET", "http://demo3919838.mockable.io/thanks", true);
+        xhttpTen.send(data);
 
-    xhttp.onreadystatechange = function() {
-      response = JSON.parse(xhttp.response);
-      console.log(response.userNote[0].type);
-      document.getElementById("900098").innerHTML = response.userNote[0].type;
+        xhttpTen.onreadystatechange = function() {
+          response = JSON.parse(xhttpTen.response);
+          console.log(xhttpTen.response.userNote[0].type);
+          document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        }
+      }
     }
   }
 }
