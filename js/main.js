@@ -170,8 +170,7 @@ function results(event) {
   }
   if(productBtn.form) {
     xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
-    //  xhttpNine.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
-    //xhttpNine.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+
     xhttpTen.send(data);
 
     xhttpTen.onreadystatechange = function() {
@@ -180,16 +179,15 @@ function results(event) {
       document.getElementById("900099").innerHTML = response.userNote[0].type;
     }
   }
-  if(resetBtn.form) {
-    xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
-    //  xhttpNine.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
-    //xhttpNine.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
-    xhttpTen.send(data);
+  // if(resetBtn.form) {
+    // xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
 
-    xhttpTen.onreadystatechange = function() {
-      response = JSON.parse(xhttpTen.response);
-      console.log(response.userNote[1].type);
-      document.getElementById("900099").innerHTML = response.userNote[1].type;
-    }
-  }
+    // xhttpTen.send(data);
+
+    // xhttpTen.onreadystatechange = function() {
+      // response = JSON.parse(xhttpTen.response);
+      // console.log(response.userNote[1].type);
+      // document.getElementById("900099").innerHTML = response.userNote[1].type;
+    // }
+  // }
 }
