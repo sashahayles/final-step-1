@@ -39,20 +39,20 @@ function results(event) {
   var formcheckE = document.getElementById("e-question");
   var formcheckF = document.getElementById("f-question");
 
-    if(formcheckA.checked) {
-      if(formcheckD.checked) {
-        xhttpThree.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P443833&preferedSku=2211605", true);
-        xhttpThree.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
-        xhttpThree.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
-        xhttpThree.send(data);
+  if(formcheckA.checked) {
+    if(formcheckD.checked) {
+      xhttpThree.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P443833&preferedSku=2211605", true);
+      xhttpThree.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+      xhttpThree.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+      xhttpThree.send(data);
 
-        xhttpThree.onreadystatechange = function() {
-          console.log(xhttpThree.response);
-          response = JSON.parse(xhttpThree.response);
-          document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
-        }
+      xhttpThree.onreadystatechange = function() {
+        console.log(xhttpThree.response);
+        response = JSON.parse(xhttpThree.response);
+        document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
     }
+  }
 
   if(formcheckA.checked) {
     if(formcheckE.checked) {
@@ -155,7 +155,7 @@ function results(event) {
   if(formcheckC.checked) {
     if(formcheckF.checked) {
       xhttpNine.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P469520&preferedSku=2421196", true);
-     xhttpNine.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+      xhttpNine.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
       xhttpNine.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
       xhttpNine.send(data);
 
@@ -167,18 +167,16 @@ function results(event) {
     }
   }
   if(formcheckD.checked) {
-    if(formcheckE.checked) {
-      if(formcheckF.checked) {
-      xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
-    //  xhttpNine.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
-      //xhttpNine.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
-      xhttpTen.send(data);
+        xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
+        //  xhttpNine.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        //xhttpNine.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpTen.send(data);
 
-      xhttpTen.onreadystatechange = function() {
-        response = JSON.parse(xhttpTen.response);
-        console.log(response.userNote[0].type);
-        document.getElementById("900098").innerHTML = response.userNote[0].type;
-      }
+        xhttpTen.onreadystatechange = function() {
+          response = JSON.parse(xhttpTen.response);
+          console.log(response.userNote[0].type);
+          document.getElementById("900099").innerHTML = response.userNote[0].type;
+        }
       }
     }
   }
