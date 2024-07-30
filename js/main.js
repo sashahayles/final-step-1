@@ -166,16 +166,4 @@ function results(event) {
       }
     }
   }
-  if(formcheckD.checked) {
-        xhttpTen.open("GET", "http://demo3919838.mockable.io/thanks", true);
-        xhttpTen.send(data);
-
-        xhttpTen.onreadystatechange = function() {
-          response = JSON.parse(xhttpTen.response);
-          console.log(response.userNote[0].type);
-          document.getElementById("900098").innerHTML = response.userNote[0].type;
-        }
-      }
-    }
-  }
 }
