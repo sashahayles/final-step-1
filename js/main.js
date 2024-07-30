@@ -31,7 +31,7 @@ function results(event) {
   let xhttpEight = new XMLHttpRequest();
   let xhttpNine = new XMLHttpRequest();
   let xhttpTen = new XMLHttpRequest();
-//moisturizer
+  //moisturizer
   let xhttpEleven = new XMLHttpRequest();
   let xhttpTwelve = new XMLHttpRequest();
   let xhttpThirteen = new XMLHttpRequest();
@@ -260,13 +260,13 @@ function results(event) {
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
       setTimeout(() => {
-        xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P466153&preferedSku=2412856", true);
-        xhttpEleven.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
-        xhttpEleven.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
-        xhttpEleven.send(data);
-        xhttpEleven.onreadystatechange = function() {
-          console.log(xhttpEleven.response);
-          response = JSON.parse(xhttpEleven.response);
+        xhttpThirteen.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P510561&preferedSku=2647568", true);
+        xhttpThirteen.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpThirteen.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpThirteen.send(data);
+        xhttpThirteen.onreadystatechange = function() {
+          console.log(xhttpThirteen.response);
+          response = JSON.parse(xhttpThirteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
       }, 2000)
@@ -283,15 +283,4 @@ function results(event) {
       document.getElementById("900099").innerHTML = response.userNote[0].type;
     }
   }
-  // if(resetBtn.form) {
-    // xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
-
-    // xhttpTen.send(data);
-
-    // xhttpTen.onreadystatechange = function() {
-      // response = JSON.parse(xhttpTen.response);
-      // console.log(response.userNote[1].type);
-      // document.getElementById("900099").innerHTML = response.userNote[1].type;
-    // }
-  // }
 }
