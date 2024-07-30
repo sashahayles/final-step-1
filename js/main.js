@@ -162,7 +162,7 @@ function results(event) {
       xhttpNine.onreadystatechange = function() {
         console.log(response.userNote[0].type);
         response = JSON.parse(xhttpNine.response);
-        document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
+        document.getElementById("900098").innerHTML = response.userNote[0].type;
       }
     }
   }
