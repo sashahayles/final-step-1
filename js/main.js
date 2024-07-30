@@ -38,6 +38,8 @@ function results(event) {
   var formcheckD = document.getElementById("d-question");
   var formcheckE = document.getElementById("e-question");
   var formcheckF = document.getElementById("f-question");
+  var productBtn = document.getElementById("final-result");
+  var retakeBtn = document.getElementById("reset-text");
 
   if(formcheckA.checked) {
     if(formcheckD.checked) {
@@ -166,8 +168,7 @@ function results(event) {
       }
     }
   }
-  if(formcheckC.checked) {
-    if(formcheckD.checked) {
+  if(productBtn.clicked) {
       xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
       //  xhttpNine.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
       //xhttpNine.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
@@ -180,4 +181,3 @@ function results(event) {
       }
     }
   }
-}
