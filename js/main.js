@@ -31,6 +31,9 @@ function results(event) {
   let xhttpEight = new XMLHttpRequest();
   let xhttpNine = new XMLHttpRequest();
   let xhttpTen = new XMLHttpRequest();
+
+  let xhttpEleven = new XMLHttpRequest();
+
   event.preventDefault();
   var formcheckA = document.getElementById("a-question");
   var formcheckB = document.getElementById("b-question");
@@ -39,7 +42,6 @@ function results(event) {
   var formcheckE = document.getElementById("e-question");
   var formcheckF = document.getElementById("f-question");
   var productBtn = document.getElementById("final-result");
-  var retakeBtn = document.getElementById("reset-text");
 
   if(formcheckA.checked) {
     if(formcheckD.checked) {
@@ -53,6 +55,17 @@ function results(event) {
         response = JSON.parse(xhttpThree.response);
         document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
+      setTimeout(() => {
+        xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P466153&preferedSku=2412856", true);
+        xhttpThree.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
+        xhttpThree.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
+        xhttpThree.send(data);
+        xhttpThree.onreadystatechange = function() {
+          console.log(xhttpThree.response);
+          response = JSON.parse(xhttpThree.response);
+          document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.
+        }
+      ), 200)
     }
   }
 
