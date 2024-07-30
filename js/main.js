@@ -65,7 +65,7 @@ function results(event) {
           response = JSON.parse(xhttpThree.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.
         }
-      ), 200)
+      }, 2000)
     }
   }
 
