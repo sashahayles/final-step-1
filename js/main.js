@@ -56,7 +56,7 @@ function results(event) {
       xhttpThree.onreadystatechange = function() {
         console.log(xhttpThree.response);
         response = JSON.parse(xhttpThree.response);
-        document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.skuImages.imageUrl;
+        document.getElementById("900098").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
       }
       setTimeout(() => {
         xhttpEleven.open("GET", "https://sephora.p.rapidapi.com/us/products/v2/detail?productId=P482006&preferedSku=2740637", true);
