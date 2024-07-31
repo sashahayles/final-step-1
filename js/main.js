@@ -68,7 +68,7 @@ function results(event) {
           response = JSON.parse(xhttpEleven.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
 
@@ -94,7 +94,7 @@ function results(event) {
           response = JSON.parse(xhttpTwelve.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
   if(formcheckA.checked) {
@@ -119,7 +119,7 @@ function results(event) {
           response = JSON.parse(xhttpThirteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
   if(formcheckB.checked) {
@@ -144,7 +144,7 @@ function results(event) {
           response = JSON.parse(xhttpEleven.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
   if(formcheckB.checked) {
@@ -169,7 +169,7 @@ function results(event) {
           response = JSON.parse(xhttpTwelve.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
   if(formcheckB.checked) {
@@ -194,7 +194,7 @@ function results(event) {
           response = JSON.parse(xhttpThirteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
   if(formcheckC.checked) {
@@ -219,7 +219,7 @@ function results(event) {
           response = JSON.parse(xhttpFourteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
   if(formcheckC.checked) {
@@ -244,7 +244,7 @@ function results(event) {
           response = JSON.parse(xhttpEleven.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
   if(formcheckC.checked) {
@@ -269,7 +269,7 @@ function results(event) {
           response = JSON.parse(xhttpThirteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 2000)
+      }, 1000)
     }
   }
   if(productBtn.form) {
