@@ -137,11 +137,11 @@ form {
   border-radius: .25rem; }
 
 .initial-routine {
-  text-align: center;
-  margin: 20px auto; }
+  text-align: center; }
 
-.initial-routine {
-  text-align: left; }
+.routine-results {
+  text-align: left;
+  margin: 20px auto; }
 
 .skin-type:nth-of-type(1) {
   margin-top: 20px; }
@@ -226,7 +226,7 @@ h4.type {
   text-align: center; }
 
 .initial-routine, .routine-results {
-  margin: 30px auto 15px; }
+  margin: 50px auto 15px; }
 
 /*contact page*/
 .jumbotron-contact {
