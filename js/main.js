@@ -68,7 +68,7 @@ function results(event) {
           response = JSON.parse(xhttpEleven.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
 
@@ -89,12 +89,12 @@ function results(event) {
         xhttpTwelve.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
         xhttpTwelve.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
         xhttpTwelve.send(data);
-        xhttpEleven.onreadystatechange = function() {
+        xhttpTwelve.onreadystatechange = function() {
           console.log(xhttpTwelve.response);
           response = JSON.parse(xhttpTwelve.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
   if(formcheckA.checked) {
@@ -119,7 +119,7 @@ function results(event) {
           response = JSON.parse(xhttpThirteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
   if(formcheckB.checked) {
@@ -144,7 +144,7 @@ function results(event) {
           response = JSON.parse(xhttpEleven.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
   if(formcheckB.checked) {
@@ -169,7 +169,7 @@ function results(event) {
           response = JSON.parse(xhttpTwelve.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
   if(formcheckB.checked) {
@@ -194,7 +194,7 @@ function results(event) {
           response = JSON.parse(xhttpThirteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
   if(formcheckC.checked) {
@@ -219,7 +219,7 @@ function results(event) {
           response = JSON.parse(xhttpFourteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
   if(formcheckC.checked) {
@@ -244,7 +244,7 @@ function results(event) {
           response = JSON.parse(xhttpEleven.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
   if(formcheckC.checked) {
@@ -269,7 +269,7 @@ function results(event) {
           response = JSON.parse(xhttpThirteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
         }
-      }, 1000)
+      }, 2000)
     }
   }
   if(productBtn.form) {
