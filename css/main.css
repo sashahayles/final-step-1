@@ -53,7 +53,7 @@ nav li a:hover {
       display: none; } }
 
 .jumbotron {
-  background-image: url("../imgs/smiling-women.jpg");
+  background-image: url("../imgs/smiling-women.webp");
   padding: 10rem 5em 6rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -230,7 +230,7 @@ h4.type {
 
 /*contact page*/
 .jumbotron-contact {
-  background-image: url("../imgs/pexels-ron-lach-8142196.jpg");
+  background-image: url("../imgs/pexels-ron-lach-8142196.webp");
   padding: 10rem 5em 6rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -257,14 +257,14 @@ footer {
   margin-top: 20px; }
   footer .img-fluid {
     max-width: 70px; }
-  footer h4 {
+  footer .h4 {
     color: #335134;
     font-weight: 600; }
-    footer h4 a {
+    footer .h4 a {
       font-weight: 800;
       color: #335134;
       transition: 200ms; }
-      footer h4 a:hover {
+      footer .h4 a:hover {
         text-decoration: none;
         color: #252038;
         transition: 200ms;
