@@ -214,7 +214,7 @@ function results(event) {
         xhttpFourteen.setRequestHeader('X-RapidAPI-Key', '3c847760d5mshe01e3c882569eafp1ae715jsnbdcf5c7796ef');
         xhttpFourteen.setRequestHeader('X-RapidAPI-Host', 'sephora.p.rapidapi.com');
         xhttpFourteen.send(data);
-        xhttpEleven.onreadystatechange = function() {
+        xhttpFourteen.onreadystatechange = function() {
           console.log(xhttpFourteen.response);
           response = JSON.parse(xhttpFourteen.response);
           document.getElementById("moisturizer").innerHTML = response.content.seoTitle + " " + response.content.seoMetaDescription;
