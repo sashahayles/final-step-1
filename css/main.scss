@@ -66,14 +66,14 @@ font-size: 42px;
 
 .jumbotron {
 background-image: url('../imgs/smiling-women.webp');
-padding: 10rem 5em 6rem;
+padding: 5em;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 border-radius: 0;
 box-shadow: inset 0 0 0 1000px rgba(45, 47, 45, .22);
 @media(min-width: 992px) {
-  padding: 13rem 5em 8rem;
+  padding: 8rem 5em 4rem;
 }
 }
 
