@@ -276,11 +276,12 @@ function results(event) {
     xhttpTen.open("GET", "https://demo3919838.mockable.io/thanks", true);
 
     xhttpTen.send(data);
-
-    xhttpTen.onreadystatechange = function() {
-      response = JSON.parse(xhttpTen.response);
-      console.log(response.userNote[0].type);
-      document.getElementById("900099").innerHTML = response.userNote[0].type;
+      xhttpTen.onreadystatechange = function() {
+        setTimeout(() => {
+        response = JSON.parse(xhttpTen.response);
+        console.log(response.userNote[0].type);
+        document.getElementById("900099").innerHTML = response.userNote[0].type;
+      }, 4000)
     }
   }
 }

@@ -15,6 +15,12 @@ body {
   font-family: $body-font;
   font-size: 14px;
 }
+#hamburger {
+  color: $accent-color;
+  &:hover{
+    text-decoration: none;
+  }
+}
 .navbar {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .32);
     background-color: $dark-purple;
@@ -33,6 +39,12 @@ nav li a {
 nav li a:hover {
   color: #736372;
   transition: 200ms;
+}
+/* temp mobile nav*/
+.nav {
+  @media(max-width: 768px) {
+    display: block;
+  }
 }
 .container-fluid {
 padding: 0 !important;
@@ -325,5 +337,13 @@ footer {
     .col-sm-7 {
       justify-content: center;
     }
+  }
+}
+footer h4 a {
+  color: $secondary-color;
+  font-weight: bold;
+  &:hover {
+    color: $dark-purple;
+    text-decoration: none;
   }
 }

@@ -8,6 +8,11 @@ body {
   font-family: "Poppins";
   font-size: 14px; }
 
+#hamburger {
+  color: #F7D0BA; }
+  #hamburger:hover {
+    text-decoration: none; }
+
 .navbar {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.32);
   background-color: #252038;
@@ -26,6 +31,11 @@ nav li a {
 nav li a:hover {
   color: #736372;
   transition: 200ms; }
+
+/* temp mobile nav*/
+@media (max-width: 768px) {
+  .nav {
+    display: block; } }
 
 .container-fluid {
   padding: 0 !important; }
@@ -280,5 +290,12 @@ footer {
       text-align: center; }
     footer .col-sm-7 {
       justify-content: center; } }
+
+footer h4 a {
+  color: #335134;
+  font-weight: bold; }
+  footer h4 a:hover {
+    color: #252038;
+    text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */
